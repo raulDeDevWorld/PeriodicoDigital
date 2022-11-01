@@ -8,25 +8,25 @@ export default function Navbar() {
     return (
         <header className={style.header}>
             <nav className={style.nav}>
-                <Link href="#inicio" legacyBehavior>
+                <Link href="#inicio" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#inicio" ? style.active : ''}`}>INICIO</a>
                 </Link>
-                <Link href="#sociedad" legacyBehavior>
+                <Link href="#sociedad" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#sociedad" ? style.active : ''}`}>SOCIEDAD</a>
                 </Link>
-                <Link href="#seguridad" legacyBehavior>
+                <Link href="#seguridad" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#seguridad" ? style.active : ''}`}>SEGURIDAD</a>
                 </Link>
-                <Link href="#pais" legacyBehavior>
+                <Link href="#pais" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#pais" ? style.active : ''}`}>PAIS</a>
                 </Link>
-                <Link href="#economia" legacyBehavior>
+                <Link href="#economia" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#economia" ? style.active : ''}`}>ECONOMIA</a>
                 </Link>
-                <Link href="#internacional" legacyBehavior>
+                <Link href="#internacional" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#internacional" ? style.active : ''}`}>INTERNACIONAL</a>
                 </Link>
-                <Link href="#deportes" legacyBehavior>
+                <Link href="#deportes" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#deportes" ? style.active : ''}`}>DEPORTES</a>
                 </Link>
             </nav>
