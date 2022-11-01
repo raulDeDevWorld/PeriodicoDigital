@@ -155,6 +155,12 @@
     align-items: center;
     justify-content: center;
   }
+  .containerSubtitle {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 5px solid #007484;
+    margin-bottom: 10px;
+  }
   .footer {
     height: 60vh;
   }
