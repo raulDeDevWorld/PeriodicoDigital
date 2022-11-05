@@ -30,7 +30,7 @@ function Login() {
     }, [user]);
     return (
         <div className={style.container}>
-            <header className={style.header}>INICIO DE SESION "PERIODICO HOY"</header>
+            <header className={style.header}>INICIO DE SESION PERIODICO HOY</header>
             
             {success == false &&  <Error>ERROR: verifique e intente nuevamente</Error>}
             {success == 'complete' && <Error>Llene todo el formulario</Error>}
