@@ -1,7 +1,6 @@
 import { onAuth, signInWithEmail } from '../firebase/utils'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { useUser } from '../context/Context'
 
 import Image from 'next/image'
@@ -32,18 +31,7 @@ function Login() {
     return (
         <div className={style.container}>
             <header className={style.header}>INICIO DE SESION "PERIODICO HOY"</header>
-            <main className={style.main}>
-                <Image src="/logo.png" width="350" height="150" alt="User" />
-                <br />
-                <form className={style.form}>
-                    <h4 className={style.subtitle}>LOGIN</h4>
-                        <input className={style.input} type="text" placeholder="example@gmail.com" />
-                        <input className={style.input} type="password" placeholder="contraseña" />
-                    <div className={style.buttonsContainer}>
-                        <Button style='buttonSecondary' click={loginWithEmailAndPassword}>Iniciar Sesion</Button>
-                    </div>
-                </form>
-            </main>
+            
             {success == false &&  <Error>ERROR: verifique e intente nuevamente</Error>}
             {success == 'complete' && <Error>Llene todo el formulario</Error>}
         </div>
