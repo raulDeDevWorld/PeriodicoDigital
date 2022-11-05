@@ -3,12 +3,20 @@ import { useRouter } from 'next/router'
 import style from '../styles/Navbar.module.css'
 
 export default function Navbar() {
-    const { pathname } = useRouter() 
-
+    const { pathname } = useRouter()
     return (
         <header className={style.header}>
             <nav className={style.nav}>
-                <Link href="#inicio" legacyBehavior scroll={false}>
+                {/*
+                    navbar && navbar != false && navbar.map((i, index) => {
+                        return (
+                            <Link href={`#${i}`} legacyBehavior scroll={false} key={index}>
+                                <a className={`${style.link} ${pathname == `#${i}`} ? style.active : ''}`}>{i}</a>
+                            </Link>
+                        )
+                    })
+                */}
+               <Link href="#inicio" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#inicio" ? style.active : ''}`}>INICIO</a>
                 </Link>
                 <Link href="#sociedad" legacyBehavior scroll={false}>
@@ -29,6 +37,7 @@ export default function Navbar() {
                 <Link href="#deportes" legacyBehavior scroll={false}>
                     <a className={`${style.link} ${pathname == "#deportes" ? style.active : ''}`}>DEPORTES</a>
                 </Link>
+              
             </nav>
         </header>
     )
