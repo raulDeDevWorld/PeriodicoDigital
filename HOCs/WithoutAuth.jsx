@@ -10,8 +10,7 @@ export function WithoutAuth(Component) {
         const router = useRouter()
         useEffect(() => {
             onAuth(setUserProfile, setUserData, postsIMG, setUserPostsIMG)
-          if (user) router.replace('/Admin')
-        }, [user]);
+        }, []);
 
         return (
             <>

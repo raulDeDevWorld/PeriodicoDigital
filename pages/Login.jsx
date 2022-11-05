@@ -11,7 +11,7 @@ import Error from '../components/Error'
 import style from '../styles/Login.module.css'
 
 function Login() {
-    const { user, setUserProfile, setUserSuccess, success } = useUser()
+    const { user, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG } = useUser()
     const router = useRouter()
 
     function loginWithEmailAndPassword(e) {
@@ -26,9 +26,9 @@ function Login() {
     }
 
     useEffect(() => {
-        onAuth(setUserProfile)
+        onAuth(setUserProfile, setUserData, postsIMG, setUserPostsIMG)
         if (user) router.replace('/Admin')
-    }, [user, success, setUserProfile, router]);
+    }, [user]);
     return (
         <div className={style.container}>
             <header className={style.header}>INICIO DE SESION "PERIODICO HOY"</header>
@@ -50,4 +50,4 @@ function Login() {
     )
 }
 
-export default WithoutAuth(Login)
+export default Login

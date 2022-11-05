@@ -12,9 +12,13 @@ import Success from '../components/Success'
 import styles from '../styles/Home.module.css'
 import { handleSignOut } from '../firebase/utils'
 import { uploadIMG } from '../firebase/storage'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+
 
 function Admin() {
-  const { userDB, setUserData, setUserSuccess, success, postsIMG, setUserPostsIMG } = useUser()
+  const { user, userDB, setUserData, setUserSuccess, success, postsIMG, setUserPostsIMG } = useUser()
+  const router = useRouter()
 
   console.log(userDB)
 
@@ -24,7 +28,17 @@ function Admin() {
   }
   function handlerLogout(e) {
     handleSignOut()
+    router.push("/Login")
+
   }
+
+
+  useEffect(() => {
+ 
+    if (!user) router.replace('/Login')
+}, [user]);
+
+
   return (
     <div className={styles.container}>
       {success == "Cargando" && <Success>Cargando...</Success>}

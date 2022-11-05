@@ -6,10 +6,10 @@ import PostOne from '../components/PostOne'
 import PostTwo from '../components/PostTwo'
 import PostThree from '../components/PostThree'
 import { useUser } from '../context/Context.js'
-import { WithAuth } from '../HOCs/WithAuth'
+import { WithoutAuth } from '../HOCs/WithoutAuth'
 import styles from '../styles/Home.module.css'
 import { writeUserData, uploadIMG } from '../firebase/utils'
-function Admin() {
+function Home() {
   const { userDB, setUserData, setUserSuccess, success, postsIMG } = useUser()
 
   console.log(postsIMG)
@@ -215,7 +215,7 @@ function Admin() {
   )
 }
 
-export default WithAuth(Admin)
+export default WithoutAuth(Home)
 
 
 

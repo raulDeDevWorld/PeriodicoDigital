@@ -242,7 +242,7 @@
     margin-bottom: 10px;
   }
   .footer {
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
   }
   .introBanner > :nth-child(1) {
